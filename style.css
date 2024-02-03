@@ -1,17 +1,27 @@
-
-body{
+body {
     background-color: #9F838C;
-}
-#mainImage{
+    margin-top: 0.5%;
+    margin-left: 100px;
+    margin-right: 100px;
 
-     width: 300px;
-     margin-left: 
-     
+}
+.selection {
+    max-height: 300px;
+    max-width: 200px;
 }
 
-image{
-    width: 5px;
-}
-.flex-container{
+.flex-container {
     display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
 }
+
+#mainImage{
+    height: 400px; 
+    width: 200px;
+    margin-left: 43%;
+    background-color: #BAABBD;
+}
+
