@@ -9,32 +9,39 @@
     <link rel="stylesheet" href="style.css">
     <script src="imageapp.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <h1>Click on images to display them</h1>
+    <div class="heading">
+        <h1>Click on images to display them</h1>
+    </div>
 
     <div>
         <img src="images/ellephoenixTransparent.png" alt="Displayed image" id="mainImage">
     </div>
     <div class="flex-container">
-        <div>
-            <img onclick="imagechanger(this)" src="images/ellephoenixTransparent.png" alt="my minecraft skin" id="ellephoenix" class="selection">
+        <div class="selection">
+            <img onclick="imagechanger(this)" src="images/ellephoenixTransparent.png" alt="my minecraft skin"
+                id="ellephoenix" class="selection">
         </div>
-        <div>
-            <img onclick="imagechanger(this)" src="images/mobsterTransparent.png" alt="mobster minecraft skin" id="mobster" class="selection">
+        <div class="selection">
+            <img onclick="imagechanger(this)" src="images/mobsterTransparent.png" alt="mobster minecraft skin"
+                id="mobster" class="selection">
         </div>
-        <div>
-            <img onclick="imagechanger(this)" src="images/undeadTransparent.png" alt="Skull-faced iceking minecraft skin"
-                id="ice_king" class="selection">
+        <div class="selection">
+            <img onclick="imagechanger(this)" src="images/undeadTransparent.png"
+                alt="Skull-faced iceking minecraft skin" id="ice_king" class="selection">
         </div>
-        <div>
-            <img onclick="imagechanger(this)" src="images/woman.jpg" alt="medieval woman in green dress minecraft skin"
-                id="woman" class="selection">
+        <div class="selection">
+            <img onclick="imagechanger(this)" src="images/womanTranparent.png"
+                alt="medieval woman in green dress minecraft skin" id="woman" class="selection">
         </div>
-
-
     </div>
+
 
 
 </body>
