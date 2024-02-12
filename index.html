@@ -7,7 +7,6 @@
     <title>Changing Images</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="imageapp.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,30 +19,32 @@
         <h1>Click on images to display them</h1>
     </div>
 
-    <div>
+    <div class="mainImageDisplay">
         <img src="images/ellephoenixTransparent.png" alt="Displayed image" id="mainImage">
     </div>
+
     <div class="flex-container">
         <div class="selection">
-            <img onclick="imagechanger(this)" src="images/ellephoenixTransparent.png" alt="my minecraft skin"
-                id="ellephoenix" class="selection">
+            <img src="images/ellephoenixTransparent.png" alt="my minecraft skin"
+                id="ellephoenix" class="selection" >
         </div>
         <div class="selection">
-            <img onclick="imagechanger(this)" src="images/mobsterTransparent.png" alt="mobster minecraft skin"
+            <img src="images/mobsterTransparent.png" alt="mobster minecraft skin"
                 id="mobster" class="selection">
         </div>
         <div class="selection">
-            <img onclick="imagechanger(this)" src="images/undeadTransparent.png"
+            <img src="images/undeadTransparent.png"
                 alt="Skull-faced iceking minecraft skin" id="ice_king" class="selection">
         </div>
         <div class="selection">
-            <img onclick="imagechanger(this)" src="images/womanTranparent.png"
+            <img src="images/womanTranparent.png"
                 alt="medieval woman in green dress minecraft skin" id="woman" class="selection">
         </div>
     </div>
 
 
-
+    <!--Move script to the bottom-->
+    <script src="imageapp.js"></script>
 </body>
 
 </html>
