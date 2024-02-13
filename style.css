@@ -30,9 +30,9 @@ body {
     height: 400px; 
     width: 200px;
     margin-left: 43%;
-    background-color: #BAABBD;
+    /* background-color: #BAABBD; */
     border-style: groove;
-    border-color: #BAABBD;
+    /* border-color: #BAABBD; */
     border-width: thick;
 }
 
@@ -44,4 +44,20 @@ body {
 .selection:active{
     background-color: #C97D60;
     border-style : inset;
+}
+
+.image1{
+    background-color: rgb(234, 118, 100);
+
+}
+
+.image2{
+    background-color: rgb(234, 156, 100);
+}
+
+.image3{
+    background-color: rgb(234, 198, 100);
+}
+.image4{
+    background-color: rgb(234, 100, 176);
 }

@@ -5,26 +5,33 @@
  * @returns {} - void
  *
  */
-function addImage(ev){
+function UpdateLargeImage(ev){
     console.log(ev.target.id + ' was clicked');
     
-
     let myImage = document.createElement("img");
     myImage.src = "images/" + ev.target.src;
-    myImage.alt = "This is a minecraft skin"
+    myImage.alt = "This is a minecraft skin";
+
+    myImage.className = ev.target.getAttribute("data-class");
 
     document.querySelector('#mainImage').src = ev.target.src;
 
 }
 
 //These are the event listeners
-document.getElementById('ellephoenix').addEventListener('click', addImage);
+document.getElementById('ellephoenix').addEventListener('click', UpdateLargeImage);
 
-document.getElementById('mobster').addEventListener('click', addImage);
+document.getElementById('mobster').addEventListener('click', UpdateLargeImage);
 
-document.getElementById('ice_king').addEventListener('click', addImage);
+document.getElementById('ice_king').addEventListener('click', function (ev){
 
-document.getElementById('woman').addEventListener('click', addImage);
+    UpdateLargeImage(ev);
+});
+
+document.getElementById('woman').addEventListener('click', (ev)=>{
+    UpdateLargeImage(ev);
+    
+});
 
 
 
