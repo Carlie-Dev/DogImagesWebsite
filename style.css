@@ -26,13 +26,13 @@ body {
     align-items: baseline;
 }
 
-#mainImage{
+#mainImageDisplay{
     height: 400px; 
     width: 200px;
     margin-left: 43%;
     /* background-color: #BAABBD; */
     border-style: groove;
-    /* border-color: #BAABBD; */
+    border-color: #BAABBD;
     border-width: thick;
 }
 
@@ -48,16 +48,23 @@ body {
 
 .image1{
     background-color: rgb(234, 118, 100);
-
+    height: 400px; 
+    width: 200px;
 }
 
 .image2{
     background-color: rgb(234, 156, 100);
+    height: 400px; 
+    width: 200px;
 }
 
 .image3{
     background-color: rgb(234, 198, 100);
+    height: 400px; 
+    width: 200px;
 }
 .image4{
     background-color: rgb(234, 100, 176);
+    height: 400px; 
+    width: 200px;
 }

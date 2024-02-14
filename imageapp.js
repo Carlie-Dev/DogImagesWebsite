@@ -1,20 +1,28 @@
 
 /**
- * 
+ * Author: Carlie Peters
  * @param {object} ev  
  * @returns {} - void
  *
  */
 function UpdateLargeImage(ev){
+
     console.log(ev.target.id + ' was clicked');
-    
+    let mainDiv = document.getElementById('mainImageDisplay');
+    mainDiv.innerHTML = "";
+
     let myImage = document.createElement("img");
-    myImage.src = "images/" + ev.target.src;
-    myImage.alt = "This is a minecraft skin";
+    myImage.src = ev.target.src;
+    myImage.alt = ev.target.alt;
 
     myImage.className = ev.target.getAttribute("data-class");
 
-    document.querySelector('#mainImage').src = ev.target.src;
+    
+
+    //document.querySelector('#mainImage').src = ev.target.src;
+    // document.querySelector('#mainImageDisplay').className = ev.target.getAttribute("data-class");
+
+    mainDiv.appendChild(myImage);
 
 }
 
@@ -34,19 +42,22 @@ document.getElementById('woman').addEventListener('click', (ev)=>{
 });
 
 
+/**
+ * 
+ * 
+ */
 
-
-//Main image code from lesson
+///Main image
 // document.getElementById('mainImage').addEventListener('click',function(ev){
 
 //     console.log(ev.target.id);
 //     console.log('Was clicked');
 
 //     let myImage = document.createElement("img");
-//     myImage.src = "images/" + ev.target.src;
+//     myImage.src = "images/" + "ellephoenixTransparent.png";
 //     myImage.alt = "This is the main image"
 
-//     document.querySelector('#mainImage').src = ev.target.src;
+//     document.querySelector('#mainImage').id = ;
     
 // })
 
