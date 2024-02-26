@@ -1,6 +1,57 @@
 
 /**
  * Author: Carlie Peters
+ * Assignment: ImageSwapping 2 with Arrays
+ */
+
+console.log('Arrays Code')
+
+
+let skinSet = ['ellephoenix.png','mobster.png','undead.png','woman.png']
+let buildSet = ['diningroom.png','hallway.png', 'beefarm.png','willowisps.png']
+let twoArrays = [skinSet,buildSet]
+
+//Set images
+
+
+
+/**
+ * 
+ * @param {object} ev 
+ * @returns - void
+ * 
+ */
+function UpdateThumbnails(ev){
+    let switcher = document.getElementById('ellephoenix');
+    switcherFileName = switcher.src.split('/').pop();
+    skinSetFileName = skinSet[0]
+    console.log('Switcher source: ' + switcher);
+    console.log('SkinSet Source: ' + skinSet[0]);
+    
+    if (switcherFileName === skinSetFileName){
+        console.log('Switching to buildSet');
+        document.getElementById('ellephoenix').src = 'images/' + buildSet[0];
+        document.getElementById('mobster').src = 'images/' + buildSet[1];
+        document.getElementById('ice_king').src = 'images/' + buildSet[2];
+        document.getElementById('woman').src = 'images/' + buildSet[3];
+        
+    }else{
+        console.log('Switching to skinSet');
+        document.getElementById('ellephoenix').src = 'images/' + skinSet[0];
+        document.getElementById('mobster').src = 'images/' + skinSet[1];
+        document.getElementById('ice_king').src = 'images/' + skinSet[2];
+        document.getElementById('woman').src = 'images/' + skinSet[3];
+    }
+
+    
+
+}
+
+document.getElementById('mainImageDisplay').addEventListener('dblclick',UpdateThumbnails)
+
+/**
+ * 
+ * 
  * @param {object} ev  
  * @returns {} - void
  *
@@ -10,15 +61,18 @@ function UpdateLargeImage(ev){
     console.log(ev.target.id + ' was clicked');
     let mainDiv = document.getElementById('mainImageDisplay');
     mainDiv.innerHTML = "";
+    
 
     let myImage = document.createElement("img");
     myImage.src = ev.target.src;
+
+
     myImage.alt = ev.target.alt;
 
     myImage.className = ev.target.getAttribute("data-class");
 
     
-
+    
     //document.querySelector('#mainImage').src = ev.target.src;
     // document.querySelector('#mainImageDisplay').className = ev.target.getAttribute("data-class");
 
@@ -41,29 +95,25 @@ document.getElementById('woman').addEventListener('click', (ev)=>{
     
 });
 
-
+//update
+loadSettings()
+UpdateThumbnails(document.addEventListener("load",loadSettings()))
 /**
- * 
+ * @param {*} none
  * 
  */
+function loadSettings(){
 
-///Main image
-// document.getElementById('mainImage').addEventListener('click',function(ev){
-
-//     console.log(ev.target.id);
-//     console.log('Was clicked');
-
-//     let myImage = document.createElement("img");
-//     myImage.src = "images/" + "ellephoenixTransparent.png";
-//     myImage.alt = "This is the main image"
-
-//     document.querySelector('#mainImage').id = ;
+    let mainDiv = document.getElementById('mainImageDisplay');
+    mainDiv.innerHTML = "";
+    let myImage = document.createElement("img");
     
-// })
+    
+    myImage.src = 'images/ellephoenix.png';
+    myImage.alt = 'Load Image';
 
-//Former Code
-// function imagechanger(skininput){
-//     document.querySelector('#mainImage').src = skininput.src;
-//     //For console reference
-//     console.log(skininput);
-// } 
+    myImage.className = 'image1';
+
+    mainDiv.appendChild(myImage)
+
+}
