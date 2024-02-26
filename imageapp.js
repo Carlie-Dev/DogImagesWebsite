@@ -97,7 +97,8 @@ document.getElementById('woman').addEventListener('click', (ev)=>{
 
 //update
 loadSettings()
-UpdateThumbnails(document.addEventListener("load",loadSettings()))
+window.addEventListener('load',UpdateThumbnails)
+
 /**
  * @param {*} none
  * 
